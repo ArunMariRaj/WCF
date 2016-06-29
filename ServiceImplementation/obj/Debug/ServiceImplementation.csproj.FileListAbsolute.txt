@@ -1,0 +1,7 @@
+C:\GitHub\WeekendProjects\WCF\ServiceImplementation\bin\Debug\ServiceImplementation.dll
+C:\GitHub\WeekendProjects\WCF\ServiceImplementation\bin\Debug\ServiceImplementation.pdb
+C:\GitHub\WeekendProjects\WCF\ServiceImplementation\bin\Debug\Contracts.dll
+C:\GitHub\WeekendProjects\WCF\ServiceImplementation\bin\Debug\Contracts.pdb
+C:\GitHub\WeekendProjects\WCF\ServiceImplementation\obj\Debug\ServiceImplementation.csprojResolveAssemblyReference.cache
+C:\GitHub\WeekendProjects\WCF\ServiceImplementation\obj\Debug\ServiceImplementation.dll
+C:\GitHub\WeekendProjects\WCF\ServiceImplementation\obj\Debug\ServiceImplementation.pdb

@@ -1,0 +1,5 @@
+C:\GitHub\WeekendProjects\WCF\Contracts\bin\Debug\Contracts.dll
+C:\GitHub\WeekendProjects\WCF\Contracts\bin\Debug\Contracts.pdb
+C:\GitHub\WeekendProjects\WCF\Contracts\obj\Debug\Contracts.csprojResolveAssemblyReference.cache
+C:\GitHub\WeekendProjects\WCF\Contracts\obj\Debug\Contracts.dll
+C:\GitHub\WeekendProjects\WCF\Contracts\obj\Debug\Contracts.pdb
