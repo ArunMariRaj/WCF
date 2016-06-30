@@ -1,31 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
+﻿using Contracts;
+using ServiceImplementation;
+using System;
 
 namespace Host
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
-    public class Service1 : IService1
+    public class EmployeeOperations : IEmployeeOperations
     {
-        public string GetData(int value)
+        private readonly ServiceImplementationLogic _serviceImplementation;
+        public EmployeeOperations()
         {
-            return string.Format("You entered: {0}", value);
+            _serviceImplementation = new ServiceImplementationLogic();
+        }
+        public bool AddEmployee(Employee employee)
+        {
+            return _serviceImplementation.AddingAnEmployee(employee);
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public bool EditEmployee(Employee employee)
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            return _serviceImplementation.EditingAnEmployee(employee);
+        }
+
+        public bool RemoveEmployee(int Id)
+        {
+            return _serviceImplementation.RemovingAnEmployee(Id);
+        }
+
+        public Employee ViewEmployee(int Id)
+        {
+            return _serviceImplementation.viewingAnEmployee(Id);
         }
     }
 }

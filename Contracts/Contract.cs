@@ -6,13 +6,17 @@ namespace Contracts
     [DataContract]
     public class Employee
     {
-        public int EmployeeId { get; set; }
+        [DataMember(EmitDefaultValue =true)]
+        public int EmployeeId = 0;
+        [DataMember]
         public string EmployeeName { get; set; }
+        [DataMember]
         public string EmployeeRole { get; set; }
+        [DataMember]
         public string EmployeePay { get; set; }
     }
     [ServiceContract]
-    interface IEmployeeOperations
+    public interface IEmployeeOperations
     {
         [OperationContract]
         bool AddEmployee(Employee employee);

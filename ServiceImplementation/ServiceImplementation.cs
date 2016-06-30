@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace ServiceImplementation
 {
-    public class ServiceImplementation
+    public class ServiceImplementationLogic
     {
         private static int _id = 10000;
         private static List<Employee> EmployeeList;
