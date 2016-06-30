@@ -7,7 +7,7 @@ namespace ServiceImplementation
     public class ServiceImplementationLogic
     {
         private static int _id = 10000;
-        private static List<Employee> EmployeeList;
+        private static List<Employee> EmployeeList = new List<Employee>();
         public bool AddingAnEmployee(Employee employee)
         {
             _id++;
@@ -29,7 +29,7 @@ namespace ServiceImplementation
         {
             if(EmployeeList.Exists(x => x.EmployeeId == Id))
             {
-                return (Employee)EmployeeList.Select(x => x.EmployeeId == Id);
+                return EmployeeList.Select(x => x.EmployeeId == Id) as Employee;
             }
             return null;
         }
