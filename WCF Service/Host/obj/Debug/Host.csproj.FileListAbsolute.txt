@@ -15,6 +15,5 @@ C:\GitHub\WCF\WCF Service\Host\bin\Debug\Contracts.dll
 C:\GitHub\WCF\WCF Service\Host\bin\Debug\ServiceImplementation.dll
 C:\GitHub\WCF\WCF Service\Host\bin\Debug\Contracts.pdb
 C:\GitHub\WCF\WCF Service\Host\bin\Debug\ServiceImplementation.pdb
-C:\GitHub\WCF\WCF Service\Host\obj\Debug\Host.csprojResolveAssemblyReference.cache
 C:\GitHub\WCF\WCF Service\Host\obj\Debug\Host.dll
 C:\GitHub\WCF\WCF Service\Host\obj\Debug\Host.pdb
