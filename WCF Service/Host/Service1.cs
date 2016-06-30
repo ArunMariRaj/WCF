@@ -1,6 +1,5 @@
 ﻿using Contracts;
 using ServiceImplementation;
-using System;
 
 namespace Host
 {
