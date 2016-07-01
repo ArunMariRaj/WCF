@@ -20,8 +20,7 @@ namespace ConsoleClient
             bool isAdded = proxy.AddEmployee(employee);
             if (isAdded)
             {
-                Employee exp = new Employee();
-                exp = proxy.ViewEmployee(10001);
+                var exp = proxy.ViewEmployee(10001) as Employee;
                 Console.WriteLine("Name: {0}, Designation: {1}", exp.EmployeeName, exp.EmployeeRole);
                 Console.ReadLine();
             }

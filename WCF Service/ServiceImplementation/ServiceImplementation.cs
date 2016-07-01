@@ -29,7 +29,7 @@ namespace ServiceImplementation
         {
             if(EmployeeList.Exists(x => x.EmployeeId == Id))
             {
-                return EmployeeList.Select(x => x.EmployeeId == Id) as Employee;
+                return EmployeeList.Where(x => x.EmployeeId == Id).FirstOrDefault();
             }
             return null;
         }
