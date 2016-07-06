@@ -1,10 +1,6 @@
 ﻿using Contracts;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleClient
 {
@@ -12,7 +8,7 @@ namespace ConsoleClient
     {
         static void Main(string[] args)
         {
-            BasicHttpBinding binding = new BasicHttpBinding();
+            WSHttpBinding binding = new WSHttpBinding();
             EndpointAddress endPoint = new EndpointAddress("http://localhost:8085/ConsoleHostTest/serviceAddress");
             IEmployeeOperations proxy = ChannelFactory<IEmployeeOperations>.CreateChannel(binding, endPoint);
 
