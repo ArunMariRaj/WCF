@@ -1,4 +1,4 @@
-﻿using Contracts;
+using Contracts;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,6 +8,10 @@ namespace ServiceImplementation
     {
         private static int _id = 10000;
         private static List<Employee> EmployeeList = new List<Employee>();
+        public ServiceImplementationLogic()
+        {
+            EmployeeList.Add(new Employee { EmployeeId=_id, EmployeeName="Test", EmployeePay="Less Pay", EmployeeRole="SoftwareEngineer" });
+        }
         public bool AddingAnEmployee(Employee employee)
         {
             _id++;
@@ -48,7 +52,8 @@ namespace ServiceImplementation
             if (EmployeeList.Exists(x => x.EmployeeId == Id))
             {
                 EmployeeList.RemoveAll(x => x.EmployeeId == Id);
-                return true;
+                if(!EmployeeList.Exists(x => x.EmployeeId == Id))
+                    return true;
             }
             return false;
         }
