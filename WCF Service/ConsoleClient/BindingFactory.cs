@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
+﻿using System.Configuration;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleClient
 {
@@ -171,6 +166,9 @@ namespace ConsoleClient
             }
         }
     }
+    /// <summary>
+    /// Implementing Factory Method pattern
+    /// </summary>
     public static class BindingFactory
     {
         public static ClientBindings GetBindingFactory(BindingTypes bindingType)
