@@ -1,4 +1,5 @@
 using ConsoleClient.BindingImplementations;
+using ConsoleClient.FactoryMethodPattern;
 using ConsoleClient.SimpleFactory;
 using Contracts;
 using System;
@@ -17,8 +18,29 @@ namespace ConsoleClient
             //Calling the Simple Factory to create object of the required Binding
             AbstractSoapClientBindings clientBindings = SimpleBindingFactory.GetBindingFactory((BindingTypes)choice);
 
+            //Calling the Factory Method to create object of required binding
+            BaseFactoryMethodCreator bindingCreator;
+            switch (choice)
+            {
+                case 0:
+                    bindingCreator = new BasicHttpBindingFactory();
+                    break;
+                case 1:
+                    bindingCreator = new WSHttpBindingFactory();
+                    break;
+                case 2:
+                    bindingCreator = new NetHttpBindingFactory();
+                    break;
+                case 3:
+                    bindingCreator = new NetTcpBindingFactory();
+                    break;
+                default:
+                    bindingCreator = null;
+                    break;
+            }
+
             //Calling the client by creating a proxy using the slected binding
-            IEmployeeOperations proxy = ChannelFactory<IEmployeeOperations>.CreateChannel(clientBindings.BindingType, clientBindings.EndPoint);
+            IEmployeeOperations proxy = ChannelFactory<IEmployeeOperations>.CreateChannel(bindingCreator.CreateBinding().BindingType, bindingCreator.CreateBinding().EndPoint);
             Employee employee = new Employee { EmployeeName = "Arun", EmployeePay = "30k", EmployeeRole = "SoftwareEngineer" };
             bool isAdded = proxy.AddEmployee(employee);
             if (isAdded)

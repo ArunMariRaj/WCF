@@ -46,7 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SimpleFactory\SimpleBindingFactory.cs" />
+    <Compile Include="FactoryMethodPattern\BaseFactoryMethodCreator.cs" />
+    <Compile Include="FactoryMethodPattern\BasicHttpBindingFactory.cs" />
+    <Compile Include="FactoryMethodPattern\NetHttpBindingFactory.cs" />
+    <Compile Include="FactoryMethodPattern\NetTcpBindingFactory.cs" />
+    <Compile Include="SimpleFactoryPattern\SimpleBindingFactory.cs" />
     <Compile Include="BindingImplementations\BasicHttpBindingClient.cs" />
     <Compile Include="BindingImplementations\NetHttpBindingClient.cs" />
     <Compile Include="BindingImplementations\NetTcpBindingClient.cs" />
@@ -66,7 +70,9 @@
       <Name>Contracts</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="FactoryMethodPattern\WSHttpBindingFactory.cs" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
